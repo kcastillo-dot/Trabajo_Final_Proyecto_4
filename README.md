@@ -8,7 +8,7 @@ Proyecto final para la asignatura **Estructura de Datos (Proyecto 4)**. El siste
 
 ## 🎥 Video de Sustentación y Manual de Uso
 
-* **Enlace en YouTube (duración ≥ 7 min):** `[PEGAR AQUÍ EL LINK DEL VIDEO DE YOUTUBE]`
+* **Enlace en YouTube (duración ≥ 7 min):** `https://youtu.be/51pmfP6k2xk`
 * **Contenido del video:** Demostración de la interfaz gráfica y bloqueo por humo en vivo, recorrido por las estructuras lineales y tabla hash, explicación del ABB de zonas e IA de decisión, comparación BFS vs. Dijkstra en `H101` y verificación de Prim/Kruskal.
 
 ---
