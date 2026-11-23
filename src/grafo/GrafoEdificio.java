@@ -16,14 +16,16 @@ public class GrafoEdificio {
     }
 
     public void agregarNodo(String nombre) {
-        if (indiceDe(nombre) != -1) return;
+        if (indiceDe(nombre) != -1)
+            return;
         nombres[cantidadNodos++] = nombre;
     }
 
     public void agregarArista(String origen, String destino, int segundos) {
         int u = indiceDe(origen);
         int v = indiceDe(destino);
-        if (u == -1 || v == -1) return;
+        if (u == -1 || v == -1)
+            return;
 
         insertarAristaDirigida(u, v, segundos);
         insertarAristaDirigida(v, u, segundos);
@@ -35,7 +37,8 @@ public class GrafoEdificio {
             adyacencia[u] = nueva;
         } else {
             Arista actual = adyacencia[u];
-            while (actual.siguiente != null) actual = actual.siguiente;
+            while (actual.siguiente != null)
+                actual = actual.siguiente;
             actual.siguiente = nueva;
         }
     }
@@ -51,7 +54,8 @@ public class GrafoEdificio {
     private boolean cambiarEstadoBloqueo(String a, String b, boolean bloquear) {
         int u = indiceDe(a);
         int v = indiceDe(b);
-        if (u == -1 || v == -1) return false;
+        if (u == -1 || v == -1)
+            return false;
         boolean ok1 = marcarSentido(u, v, bloquear);
         boolean ok2 = marcarSentido(v, u, bloquear);
         return ok1 && ok2;
@@ -69,14 +73,26 @@ public class GrafoEdificio {
         return false;
     }
 
-    public boolean existeNodo(String nombre) { return indiceDe(nombre) != -1; }
-    public int getCantidadNodos() { return cantidadNodos; }
-    public String getNombreNodo(int indice) { return nombres[indice]; }
-    public Arista getAdyacentes(int indice) { return adyacencia[indice]; }
+    public boolean existeNodo(String nombre) {
+        return indiceDe(nombre) != -1;
+    }
+
+    public int getCantidadNodos() {
+        return cantidadNodos;
+    }
+
+    public String getNombreNodo(int indice) {
+        return nombres[indice];
+    }
+
+    public Arista getAdyacentes(int indice) {
+        return adyacencia[indice];
+    }
 
     public int indiceDe(String nombre) {
         for (int i = 0; i < cantidadNodos; i++) {
-            if (nombres[i].equals(nombre)) return i;
+            if (nombres[i].equals(nombre))
+                return i;
         }
         return -1;
     }
@@ -84,7 +100,8 @@ public class GrafoEdificio {
     public int pesoEntre(int u, int v) {
         Arista actual = adyacencia[u];
         while (actual != null) {
-            if (actual.destino == v && !actual.bloqueada) return actual.segundos;
+            if (actual.destino == v && !actual.bloqueada)
+                return actual.segundos;
             actual = actual.siguiente;
         }
         return -1;

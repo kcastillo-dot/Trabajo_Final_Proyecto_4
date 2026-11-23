@@ -1,7 +1,7 @@
 package estructura.lineales;
 
 public class ListaDobleOcupantes {
-     private static class NodoDoble {
+    private static class NodoDoble {
         Persona persona;
         NodoDoble anterior;
         NodoDoble siguiente;
@@ -51,7 +51,8 @@ public class ListaDobleOcupantes {
         NodoDoble actual = cabeza;
         while (actual != null) {
             sb.append(actual.persona.getNombre());
-            if (actual.siguiente != null) sb.append(" -> ");
+            if (actual.siguiente != null)
+                sb.append(" -> ");
             actual = actual.siguiente;
         }
         return sb.toString();
@@ -62,7 +63,8 @@ public class ListaDobleOcupantes {
         NodoDoble actual = cola;
         while (actual != null) {
             sb.append(actual.persona.getNombre());
-            if (actual.anterior != null) sb.append(" -> ");
+            if (actual.anterior != null)
+                sb.append(" -> ");
             actual = actual.anterior;
         }
         return sb.toString();

@@ -39,7 +39,8 @@ public class ResultadoRuta {
 
     public boolean usaEscalera(String escalera) {
         for (String n : nodos) {
-            if (n.equals(escalera)) return true;
+            if (n.equals(escalera))
+                return true;
         }
         return false;
     }
@@ -48,7 +49,8 @@ public class ResultadoRuta {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < nodos.length; i++) {
             sb.append(nodos[i]);
-            if (i < nodos.length - 1) sb.append(" -> ");
+            if (i < nodos.length - 1)
+                sb.append(" -> ");
         }
         return sb.toString();
     }

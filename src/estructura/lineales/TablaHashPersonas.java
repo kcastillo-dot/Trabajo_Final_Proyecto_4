@@ -5,7 +5,10 @@ public class TablaHashPersonas {
     private static class NodoCubeta {
         Persona persona;
         NodoCubeta siguiente;
-        NodoCubeta(Persona persona) { this.persona = persona; }
+
+        NodoCubeta(Persona persona) {
+            this.persona = persona;
+        }
     }
 
     private static final int NUM_CUBETAS = 5;
@@ -52,10 +55,12 @@ public class TablaHashPersonas {
     public String mostrarCubeta(int indice) {
         StringBuilder sb = new StringBuilder("Cubeta " + indice + ": ");
         NodoCubeta actual = cubetas[indice];
-        if (actual == null) return sb.append("(vacía)").toString();
+        if (actual == null)
+            return sb.append("(vacía)").toString();
         while (actual != null) {
             sb.append(actual.persona.getId()).append(" ").append(actual.persona.getNombre());
-            if (actual.siguiente != null) sb.append(" -> ");
+            if (actual.siguiente != null)
+                sb.append(" -> ");
             actual = actual.siguiente;
         }
         return sb.toString();

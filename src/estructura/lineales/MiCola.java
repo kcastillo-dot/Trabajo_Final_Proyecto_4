@@ -5,7 +5,10 @@ public class MiCola<T> {
     private static class Nodo<T> {
         T dato;
         Nodo<T> siguiente;
-        Nodo(T dato) { this.dato = dato; }
+
+        Nodo(T dato) {
+            this.dato = dato;
+        }
     }
 
     private Nodo<T> frente;
@@ -24,15 +27,25 @@ public class MiCola<T> {
     }
 
     public T desencolar() {
-        if (estaVacia()) return null;
+        if (estaVacia())
+            return null;
         T dato = frente.dato;
         frente = frente.siguiente;
-        if (frente == null) fin = null;
+        if (frente == null)
+            fin = null;
         tamano--;
         return dato;
     }
 
-    public T verFrente() { return estaVacia() ? null : frente.dato; }
-    public boolean estaVacia() { return frente == null; }
-    public int getTamano() { return tamano; }
+    public T verFrente() {
+        return estaVacia() ? null : frente.dato;
+    }
+
+    public boolean estaVacia() {
+        return frente == null;
+    }
+
+    public int getTamano() {
+        return tamano;
+    }
 }
