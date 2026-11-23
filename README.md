@@ -105,7 +105,7 @@ El desarrollo se dividió en 4 ramas independientes integradas mediante *Pull Re
 | Integrante | Usuario GitHub | Rama | Responsabilidad |
 | :--- | :--- | :--- | :--- |
 | `Karen Castillo` | `@kcastillo-dot` | `feature/estructuras-lineales` | `Persona`, `ListaDobleOcupantes`, `MiCola`, `MiPila` y `TablaHashPersonas`. |
-| `Alex Santiago Perez Illera` | `@ASPERI2026` | `feature/arboles-ia` | `ZonaRiesgo`, `ArbolRiesgoZonas`, `ArbolDecisionEvacuacion` y `AsesorIAEvacuacion`. |
+| `Alex Santiago Perez Illera` | `@ASPERI2026 - @aillera91` | `feature/arboles-ia` | `ZonaRiesgo`, `ArbolRiesgoZonas`, `ArbolDecisionEvacuacion` y `AsesorIAEvacuacion`. |
 | `Nicole Henao` | `@nicoval18` | `feature/grafo-algoritmos` | `GrafoEdificio`, `Arista`, `ResultadoRuta`, Dijkstra, BFS, Prim y Kruskal. |
 | `Juan Jose Hoyos` | `@jjhoyosc-tech` | `feature/gui-integracion` | `SimuladorEvacuacion`, interfaz Swing 2D (`EstilosUI`, `PanelMapaEdificio`, `VentanaPrincipal`), `evacuacion.txt` . |
 
